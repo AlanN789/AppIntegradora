@@ -81,10 +81,10 @@ export class DashboardComponent implements OnInit {
   getSensores():void{
     this.sensoresService.verSensores().subscribe((data:any)=>{
       if (data.length != this.Sensores.length){
-        this.Sensores = data
         this.mostrarChart = false
         this.Id = null
       }
+      this.Sensores = data
       console.log(this.Sensores)
     })
   }
