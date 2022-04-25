@@ -1,0 +1,23 @@
+<h1>Configuracion del Sensor</h1>
+<div>
+  <form [formGroup]="configForm" (ngSubmit)="edit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+        <input formControlName="clave" matInput #input placeholder="Ex. Temperatura Terceario">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+      <input formControlName="tipo" matInput #input placeholder="Ex. Temperatura Terceario">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Pin 1</mat-label>
+        <input formControlName="trigger" matInput #input placeholder="Ex. 1">
+    </mat-form-field>
+    <mat-form-field appearance="fill" *ngIf="mostrarTrigger">
+      <mat-label>Pin 2</mat-label>
+        <input formControlName="echo" matInput #input placeholder="Ex. 2">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="accent">Editar Sensor</button>
+    <button mat-raised-button color="warn" style="margin-left: 5px;" (click)="delete()">Eliminar Sensor</button>
+  </form>
+</div>

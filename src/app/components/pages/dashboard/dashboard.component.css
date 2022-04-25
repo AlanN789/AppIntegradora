@@ -1,0 +1,31 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+.example-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.example-table {
+  width: 100%;
+}
+
+.head {
+  font-size: 300%;
+  padding-top: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+  background-color: rgb(103, 58, 183);
+  color: white;
+}
+.mat-icon {
+  vertical-align: middle;
+}

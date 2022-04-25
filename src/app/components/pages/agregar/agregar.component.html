@@ -1,0 +1,24 @@
+<h1>Agregar Sensor</h1>
+<div>
+  <form [formGroup]="agregarForm" (ngSubmit)="agregar()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+        <input formControlName="clave" matInput #input placeholder="Ex. Temperatura Terceario">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+        <mat-select formControlName="tipo">
+          <mat-option  *ngFor="let tipo of Tipos" value="{{tipo.id}}" (click)="disabledtrigger(tipo.id)" >{{tipo.nombre}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Pin 1</mat-label>
+        <input formControlName="trigger" matInput #input placeholder="Ex. 1">
+    </mat-form-field>
+    <mat-form-field appearance="fill" *ngIf="mostrarTrigger">
+      <mat-label>Pin 2</mat-label>
+        <input formControlName="echo" matInput #input placeholder="Ex. 2">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Agregar Sensor</button>
+  </form>
+</div>
